@@ -27,5 +27,13 @@ class Test extends FunSuite{
 	test("problem 8") {
 		assert(5832 == Solutions.problem8(4))
 	}
+
+	test("problem 9") {
+		assert(60 == Solutions.problem9(12))
+	}
+
+	test("problem 10") {
+		assert(17 == Solutions.problem10(10))
+	}
 }
 

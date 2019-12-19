@@ -134,4 +134,33 @@ object Solutions {
 
 		maxProduct
 	}
+
+	def problem9(sum: Int = 1000): Int = {
+		def pythagoreanTriplet(m: Int, n: Int): List[Int] = List(m*m - n*n, 2 * m*n, m*m + n*n)
+
+		for (i <- 1 to sum) {
+			for (j <- 1 until i) {
+				if (pythagoreanTriplet(i, j).sum == sum)
+					return pythagoreanTriplet(i, j).product
+			}
+		}
+
+		-1
+	}
+
+
+	def problem10(upperBound: Int = 2e6.toInt): Long = {
+		var sum: Long = 0
+		var currentNumber: Long = 2
+
+		while (currentNumber < upperBound) {
+			if (ToolBox.isPrime(currentNumber)) {
+				sum += currentNumber
+			}
+
+			currentNumber += 1
+		}
+
+		sum
+	}
 }

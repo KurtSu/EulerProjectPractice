@@ -4,8 +4,9 @@ import scala.collection.mutable.ListBuffer
 
 object ToolBox {
 	def isPrime(n: Long): Boolean = {
-		if (n % 2 == 0)
+		if (n % 2 == 0 & n > 2)
 			false
+
 		else {
 			var factor: Int = 3
 

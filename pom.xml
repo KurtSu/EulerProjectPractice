@@ -1,6 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0">
     <groupId>com.mycompany.app</groupId>
-    <artifactId>Volant_Fox</artifactId>
+    <artifactId>oops</artifactId>
     <modelVersion>4.0.0</modelVersion>
     <url>http://maven.apache.org</url>
     <version>0.0.1</version>

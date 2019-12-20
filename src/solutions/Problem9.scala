@@ -33,4 +33,8 @@ object Problem9 {
 	 */
 	def pythagoreanTriplet(m: Int, n: Int): List[Int] =
 		List(m*m - n*n, 2 * m*n, m*m + n*n)
+
+	def main(args: Array[String]): Unit = {
+		println(problem9())
+	}
 }

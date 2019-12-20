@@ -25,4 +25,8 @@ object Problem10 {
 
 		sum
 	}
+
+	def main(args: Array[String]): Unit = {
+		println(problem10())
+	}
 }

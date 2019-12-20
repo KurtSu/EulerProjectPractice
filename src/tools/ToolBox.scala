@@ -115,4 +115,34 @@ object ToolBox {
 	def lcm(m: Long, n: Long): Long = {
 		m * n / gcd(m, n)
 	}
+
+	/**
+	 * Find all divisors of a number without duplicate.
+	 * 12/19/2019
+	 * @param n the number.
+	 * @return  a set contains all n's divisors including 1 and itself.
+	 */
+	def divisorsSet(n: Long): Set[Long] = {
+		var retVal: Set[Long] = Set(1, n)
+		var divisor: Int = 2
+
+		while (divisor <= math.sqrt(n)) {
+			if (n % divisor == 0) {
+				retVal += divisor
+				retVal += n / divisor
+			}
+
+			divisor += 1
+		}
+
+		retVal
+	}
+
+	/**
+	 * The nth triangle number. Constant time cost.
+	 * 12/19/2019
+	 * @param n the index number.
+	 * @return  the nth triangle number.
+	 */
+	def triangleNumber(n: Int): Long = (n * (n + 1)) / 2
 }

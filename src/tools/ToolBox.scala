@@ -10,22 +10,27 @@ object ToolBox {
 	 * @return true for prime number, false otherwise.
 	 */
 	def isPrime(n: Long): Boolean = {
-		if (n % 2 == 0 & n > 2)
-			false
-
-		else if (n == 1)
-			false
+		if (n < 0)
+			isPrime(-n)
 
 		else {
-			var factor: Int = 3
+			if (n % 2 == 0 & n > 2)
+				false
 
-			while (factor <= math.sqrt(n)) {
-				if (n % factor == 0)
-					return false
-				factor += 2
+			else if (n == 1 || n == 0)
+				false
+
+			else {
+				var factor: Int = 3
+
+				while (factor <= math.sqrt(n)) {
+					if (n % factor == 0)
+						return false
+					factor += 2
+				}
+
+				true
 			}
-
-			true
 		}
 	}
 
@@ -141,8 +146,18 @@ object ToolBox {
 	/**
 	 * The nth triangle number. Constant time cost.
 	 * 12/19/2019
+	 *
 	 * @param n the index number.
-	 * @return  the nth triangle number.
+	 * @return the nth triangle number.
 	 */
 	def triangleNumber(n: Int): Long = (n * (n + 1)) / 2
+
+	def permutations(m: Int, n: Int): Int = {
+		var product: Int = 1
+
+		for (i <- 0 until n)
+			product *= m - i
+
+		product
+	}
 }
